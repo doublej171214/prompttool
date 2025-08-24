@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,25 +13,33 @@ export default function Home() {
           height={38}
           priority
         />
+        
+        <div className="text-center sm:text-left">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            PromptBuilder 可视化工作流构建器
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            通过拖拽节点和连线，轻松构建复杂的AI提示词工作流
+          </p>
+        </div>
+
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
+            点击下方按钮进入{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
+              PromptBuilder
             </code>
             .
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            拖拽节点到画布，连接它们，实时预览生成的提示词。
           </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white gap-2 hover:from-purple-600 hover:to-pink-600 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+            href="/prompt-builder"
           >
             <Image
               className="dark:invert"
@@ -39,15 +48,15 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
-          </a>
+            开始使用 PromptBuilder
+          </Link>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            了解更多
           </a>
         </div>
       </main>
@@ -65,7 +74,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          学习
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -80,7 +89,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          示例
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -95,7 +104,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          访问 nextjs.org →
         </a>
       </footer>
     </div>
